@@ -1,0 +1,46 @@
+:root{
+  --brand-1: #0b3b52; /* deep blue */
+  --brand-2: #0f2530; /* darker */
+  --accent: #cfa544; /* gold-ish */
+  --bg: #ffffff;
+  --muted: #6b7280;
+}
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{font-family:Inter, system-ui, -apple-system, 'Helvetica Neue', Arial; margin:0; background:linear-gradient(180deg,#fbfdff,#f5f9ff); color:#0b2b3a; -webkit-font-smoothing:antialiased}
+.page{min-height:100vh; display:flex; flex-direction:column; align-items:stretch}
+.hero{background:linear-gradient(180deg,var(--brand-2),var(--brand-1)); color:white; text-align:center; padding:48px 16px}
+.logo-hero{width:160px; height:auto; display:block; margin:0 auto 12px; filter:drop-shadow(0 6px 10px rgba(11,59,82,0.25))}
+.hero h1{margin:6px 0 4px; font-size:22px; font-weight:700}
+.lead{opacity:0.95; margin:6px 0 0}
+.container{padding:20px; max-width:920px; margin: -36px auto 24px; width:100%}
+.card{background:white; border-radius:14px; padding:18px; box-shadow:0 10px 30px rgba(15,37,48,0.06)}
+.lead-form{display:grid; gap:12px}
+.lead-form label{display:flex; flex-direction:column; font-size:14px; color:var(--muted)}
+.lead-form input, .lead-form select{padding:12px; font-size:16px; border:1px solid #e6eef2; border-radius:10px; outline:none}
+.lead-form input:focus, .lead-form select:focus{box-shadow:0 4px 18px rgba(11,59,82,0.06); border-color:var(--brand-1)}
+.row{display:grid; gap:12px}
+.row.two{grid-template-columns:1fr 1fr}
+.btn{background:linear-gradient(90deg,var(--brand-1),#15415a); color:white; padding:12px; border:none; border-radius:12px; font-weight:700; cursor:pointer}
+.btn:disabled{opacity:0.6; cursor:not-allowed}
+.msg{margin-top:8px; padding:12px; border-radius:8px}
+.msg.success{background:#e6f9ef; color:#087d50}
+.msg.error{background:#ffecea; color:#b00020}
+.msg.warning{background:#fff4e5; color:#8a5b00}
+.services{display:grid; gap:8px; margin-top:12px}
+.service-item{padding:12px; border-radius:10px; border:1px solid #eef2f6; background:linear-gradient(180deg,#fff,#fbfdff)}
+
+/* footer */
+.footer{background:#f6f7f9; padding:18px 16px; text-align:center; margin-top:auto}
+.logo-footer{width:120px; height:auto; display:block; margin:0 auto 8px}
+.footer-info{font-size:14px; color:#333}
+
+/* responsive tweaks */
+@media(max-width:720px){
+  .hero{padding:36px 12px}
+  .logo-hero{width:140px}
+  .container{padding:16px; margin-top:-28px}
+  .row.two{grid-template-columns:1fr}
+  .hero h1{font-size:20px}
+  .lead-form input, .lead-form select{font-size:15px; padding:10px}
+}
